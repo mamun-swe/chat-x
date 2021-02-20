@@ -74,6 +74,8 @@ const Index = () => {
                                 </form>
                             </div>
                         </div>
+
+                        <p>Task : RoomID will be concat with loggedin user ID (Own/Sender ID)</p>
                     </div>
                 </div>
             </div>
