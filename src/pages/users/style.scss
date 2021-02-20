@@ -1,0 +1,35 @@
+@import "../../App.scss";
+
+.loading {
+    p {
+        font-size: 13px;
+    }
+}
+
+.user {
+    cursor: pointer;
+    padding: 15px 10px;
+    transition: 0.3s all;
+
+    .rounded-circle {
+        padding: 9px 8px;
+        background: #dfdfdf;
+
+        h6 {
+            font-size: 14px;
+            font-weight: 900;
+        }
+    }
+
+    .name-container {
+        padding-top: 7px;
+
+        p {
+            font-size: 13px;
+        }
+    }
+
+    &:hover {
+        background: #dfdfdf49;
+    }
+}
