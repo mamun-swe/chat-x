@@ -1,0 +1,101 @@
+@import "../../App.scss";
+
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 10px 15px;
+    background: #fff;
+
+    .dropdown {
+        .btn {
+            color: #000;
+            width: 32px;
+            height: 32px;
+            border: 0 !important;
+            border-radius: 50%;
+            background: #dfdfdf;
+            font-size: 20px;
+            padding-top: 3px !important;
+            padding-right: 0px !important;
+            padding-left: 0 !important;
+
+            &:focus {
+                border: 0 !important;
+                box-shadow: none !important;
+            }
+
+            &:active {
+                border: 0 !important;
+                box-shadow: none !important;
+                background: none !important;
+            }
+        }
+
+        .dropdown-menu {
+            width: 250px;
+            padding: 10px;
+            border: 0 !important;
+            border-radius: 6px !important;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+            .dropdown-item {
+                padding: 10px;
+                margin: 0 !important;
+                font-size: 13px !important;
+                font-weight: 900 !important;
+                border-radius: 6px !important;
+                text-transform: capitalize !important;
+
+                .icon {
+                    padding: 8px 9px;
+                    margin-right: 15px;
+                    border-radius: 25px;
+                    background: #dfdfdf;
+                }
+
+                &:hover {
+                    color: $primary;
+                    background: #dfdfdf2f;
+                }
+
+                &:focus {
+                    border: 0 !important;
+                    box-shadow: none !important;
+                }
+
+                &:active {
+                    border: 0 !important;
+                    box-shadow: none !important;
+                    background: none !important;
+                }
+            }
+        }
+    }
+
+    .img-container {
+        width: 32px;
+        height: 32px;
+        background: $primary;
+
+        h6 {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 900;
+        }
+    }
+
+    .name-container {
+        padding-top: 7px;
+
+        p {
+            font-size: 13px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        padding: 15px 30px;
+    }
+}

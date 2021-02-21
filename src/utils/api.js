@@ -1,1 +1,1 @@
-export const api = 'https://jsonplaceholder.typicode.com/'
+export const api = 'https://chat-x-api.herokuapp.com/api/v1/'

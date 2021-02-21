@@ -20,8 +20,8 @@ const Login = () => {
     const checkRole = (token) => {
         const decode = jwt_decode(token)
         const role = decode.role
-        if (role === 'super_admin') {
-            return history.push('/dashboard')
+        if (role === 'user') {
+            return history.push('/chat-room')
         }
     }
 
@@ -30,21 +30,20 @@ const Login = () => {
 
     // Submit Form
     const onSubmit = async (data) => {
-        console.log(data);
-        // try {
-        //     setLogging(true)
-        //     const response = await Axios.post(`${api}admin/auth/login`, data)
-        //     if (response.status === 200) {
-        //         localStorage.setItem('token', response.data.token)
-        //         checkRole(response.data.token)
-        //         setLogging(false)
-        //     }
-        // } catch (error) {
-        //     if (error) {
-        //         setLogging(false)
-        //         toast.warn(error.response.data.message)
-        //     }
-        // }
+        try {
+            setLogging(true)
+            const response = await Axios.post(`${api}auth/login`, data)
+            if (response.status === 200) {
+                localStorage.setItem('token', response.data.token)
+                checkRole(response.data.token)
+                setLogging(false)
+            }
+        } catch (error) {
+            if (error) {
+                setLogging(false)
+                toast.error(error.response.data.message)
+            }
+        }
     }
 
     return (
@@ -59,7 +58,7 @@ const Login = () => {
                                 <div className="logo-container">
                                     <img src={Images.Logo} className="img-fluid" alt="..." />
                                 </div>
-                                <h2>চিঠি</h2>
+                                <h2>কথা বলুন চিঠি'তে</h2>
                                 <p>Connect with million friends.</p>
 
                                 <ul>

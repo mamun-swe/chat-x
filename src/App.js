@@ -1,11 +1,12 @@
 import './App.scss'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import UsersIndex from './pages/users/Index'
-import ChatRoom from './pages/chat/Index'
 
 import Register from './pages/auth/Register'
 import Login from './pages/auth/Login'
+
+import PrivateRoute from './components/PrivateRoute/Index'
+import DashboardMaster from './pages/dashboard/Master'
 
 function App() {
   return (
@@ -14,8 +15,11 @@ function App() {
         <Switch>
           <Route exact path="/" component={Register} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/users" component={UsersIndex} />
-          <Route exact path="/chat-room/:name/:id" component={ChatRoom} />
+
+          <PrivateRoute path="/chat-room" >
+            <DashboardMaster />
+          </PrivateRoute>
+
         </Switch>
       </Router>
     </div>
