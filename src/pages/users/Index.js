@@ -71,8 +71,12 @@ const Index = () => {
                                     users.map((user, i) =>
 
                                         <div className="user border-bottom d-flex" key={i} onClick={() => goChatRoom(user)}>
-                                            <div className="img-container rounded-circle">
-                                                <h6 className="mb-0 text-uppercase">{splitName(user.name)}</h6>
+                                            <div className="img-container rounded-circle"
+                                                style={{ background: '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6) }}
+                                            >
+                                                <div className="flex-center flex-column">
+                                                    <h6 className="mb-0 text-uppercase">{splitName(user.name)}</h6>
+                                                </div>
                                             </div>
                                             <div className="name-container pl-3">
                                                 <p className="text-capitalize mb-0">{user.name}</p>
