@@ -1,0 +1,80 @@
+@import "../../../App.scss";
+
+.chat-room {
+    // user list container
+    .users-list-container {
+        position: fixed;
+        width: 300px;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        padding-top: 58px;
+        z-index: 9;
+        background: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+
+        .user {
+            cursor: pointer;
+            padding: 10px;
+            transition: 0.3s all;
+            border-radius: 6px;
+
+            .rounded-circle {
+                width: 35px;
+                height: 35px;
+                padding: 9px 8px;
+
+                h6 {
+                    font-size: 14px;
+                    font-weight: 900;
+                    color: #fff;
+                }
+            }
+
+            .name-container {
+                padding-top: 7px;
+
+                p {
+                    font-size: 13px;
+                }
+            }
+
+            &:hover {
+                background: #dfdfdf67;
+            }
+        }
+
+        .active {
+            // background: #0354f52c;
+            background: #f6442c27;
+
+            &:hover {
+                background: #f6442c27;
+            }
+        }
+
+        @media (min-width: 992px) {
+            padding-top: 68px;
+        }
+    }
+
+    // message container
+    .message-container {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        padding-top: 58px;
+        padding-left: 310px;
+        background: #fff;
+
+        @media (min-width: 992px) {
+            padding-top: 68px;
+        }
+    }
+}
