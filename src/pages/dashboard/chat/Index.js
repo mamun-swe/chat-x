@@ -10,8 +10,8 @@ import UserList from '../../../components/UserList/Index'
 let socket
 
 const Index = () => {
-    // const ENDPOINT = 'https://chat-x-api.herokuapp.com'
-    const ENDPOINT = 'localhost:4000'
+    const ENDPOINT = 'https://chat-x-api.herokuapp.com'
+    // const ENDPOINT = 'localhost:4000'
     const location = useLocation()
     const [isLoading, setLoading] = useState(true)
     const query = queryString.parse(location.search)
